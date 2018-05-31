@@ -22,6 +22,9 @@ GameObject:
   - component: {fileID: 114531951550354492}
   - component: {fileID: 114155483930323896}
   - component: {fileID: 114811957321689914}
+  - component: {fileID: 114212756728990258}
+  - component: {fileID: 114394186071594586}
+  - component: {fileID: 114962416929240798}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Untagged
@@ -38,8 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4611688143452114}
   - component: {fileID: 20891405121642048}
-  - component: {fileID: 81325956486886960}
-  - component: {fileID: 114363575013081278}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -184,13 +185,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1746704796129672}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!81 &81325956486886960
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1231662916937782}
-  m_Enabled: 1
 --- !u!114 &114155483930323896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,17 +196,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10573327cc671c9408dc9f5031156644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114363575013081278
+--- !u!114 &114212756728990258
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1231662916937782}
+  m_GameObject: {fileID: 1134865631227184}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 828de9ca5e496984290c15490942e1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Camera: {fileID: 1231662916937782}
+--- !u!114 &114394186071594586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134865631227184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114531951550354492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,6 +272,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5521ddfb54add044f9c0c67853b05f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114962416929240798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134865631227184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f427abb2cc376f4eb7c3f9af9575967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 1231662916937782}
+  BulletPrefab: {fileID: 1373661730544358, guid: 93ac7b9a5eebe194b82f5124298e57a7,
+    type: 2}
 --- !u!136 &136108761672577302
 CapsuleCollider:
   m_ObjectHideFlags: 1

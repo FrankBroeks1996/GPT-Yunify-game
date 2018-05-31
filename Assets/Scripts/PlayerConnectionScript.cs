@@ -26,7 +26,8 @@ public class PlayerConnectionScript : NetworkBehaviour {
         if(PlayerPrefab != null)
         {
             GameObject go = Instantiate(PlayerPrefab);
-            NetworkServer.Spawn(go);
+            //go.gameObject.GetComponent<NetworkIdentity>().AssignClientAuthority(connectionToClient);
+            NetworkServer.SpawnWithClientAuthority(go, connectionToClient);
         }
     }
 }
