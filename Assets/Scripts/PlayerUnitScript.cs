@@ -6,7 +6,7 @@ public class PlayerUnitScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GameManagerScript.Instance().AddPlayer(this.gameObject);
+        GameManagerScript.instance.AddPlayer(this.gameObject);
 	}
 	
 	// Update is called once per frame
@@ -16,6 +16,6 @@ public class PlayerUnitScript : MonoBehaviour {
 
     void OnDestroy()
     {
-        GameManagerScript.Instance().RemovePlayer(this.gameObject);
+        GameManagerScript.instance.RemovePlayer(this.gameObject);
     }
 }

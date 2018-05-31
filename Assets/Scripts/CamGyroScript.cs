@@ -24,8 +24,7 @@ public class CamGyroScript : NetworkBehaviour {
 
         Camera.SetActive(true);
 
-        transform.Rotate(0, -Input.gyro.rotationRateUnbiased.y, 0);
-        this.transform.Rotate(-Input.gyro.rotationRateUnbiased.x, 0, 0);
+        transform.Rotate(0, -Input.gyro.rotationRateUnbiased.y,0);
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             this.transform.Rotate(Vector3.down);

@@ -25,9 +25,10 @@ GameObject:
   - component: {fileID: 114212756728990258}
   - component: {fileID: 114394186071594586}
   - component: {fileID: 114962416929240798}
+  - component: {fileID: 114986419807261648}
   m_Layer: 0
   m_Name: PlayerObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +62,7 @@ GameObject:
   - component: {fileID: 136108761672577302}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5521ddfb54add044f9c0c67853b05f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 5
 --- !u!114 &114962416929240798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,6 +288,18 @@ MonoBehaviour:
   Camera: {fileID: 1231662916937782}
   BulletPrefab: {fileID: 1373661730544358, guid: 93ac7b9a5eebe194b82f5124298e57a7,
     type: 2}
+--- !u!114 &114986419807261648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134865631227184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5521ddfb54add044f9c0c67853b05f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 5
 --- !u!136 &136108761672577302
 CapsuleCollider:
   m_ObjectHideFlags: 1

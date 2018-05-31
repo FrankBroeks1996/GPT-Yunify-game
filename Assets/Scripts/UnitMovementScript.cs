@@ -8,11 +8,14 @@ public class UnitMovementScript : MonoBehaviour {
     public float MovementSpeed = 5.0f;
 	// Use this for initialization
 	void Start () {
-        target = GameManagerScript.Instance().GetTarget();
+        target = GameManagerScript.instance.GetTarget();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = Vector3.MoveTowards(transform.position,target.transform.position , MovementSpeed * Time.deltaTime);
+        if (target != null)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, MovementSpeed * Time.deltaTime);
+        }
     }
 }

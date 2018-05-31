@@ -21,10 +21,9 @@ public class BulletScript : MonoBehaviour {
 
     void OnCollisionEnter(Collision objectHit)
     {
-        Debug.Log("HIT!");
         if (objectHit.gameObject.tag == "Enemy")
         {
-            objectHit.gameObject.GetComponent<EnemyScript>().Health -= Damage;
+            objectHit.gameObject.GetComponent<HealthScript>().Health -= Damage;
             Destroy(gameObject);
         }
     }
