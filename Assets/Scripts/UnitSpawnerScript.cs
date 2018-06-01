@@ -24,7 +24,6 @@ public class UnitSpawnerScript : NetworkBehaviour
     Vector3 FindSpawnLocation()
     {
         Vector3 location;
-        Debug.Log(GameManagerScript.instance.GetTarget());
         if (GameManagerScript.instance.GetTarget() != null)
         {
             location = GameManagerScript.instance.GetTarget().transform.position;
@@ -54,7 +53,6 @@ public class UnitSpawnerScript : NetworkBehaviour
         Debug.Log("hi");
         if (enemyPrefab != null)
         {
-            Debug.Log("UnitSpawnerScript:cmdSpawnEnemy -- Spawning enemy..");
             Vector3 v3 = FindSpawnLocation();
             GameObject go = Instantiate(enemyPrefab, v3, Quaternion.identity);
             NetworkServer.Spawn(go);

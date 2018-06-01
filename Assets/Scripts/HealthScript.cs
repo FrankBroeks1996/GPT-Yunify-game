@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
-public class HealthScript : MonoBehaviour {
+public class HealthScript : MonoBehaviour
+{
 
     public int Health = 5;
 
@@ -15,7 +17,7 @@ public class HealthScript : MonoBehaviour {
             Destroy(gameObject);
             if(transform.tag == "Player")
             {
-                SceneManager.LoadScene("GameOverScene");
+                ChangeSceneHandler.changeSceneHandler.ChangeToGameOverScreen();
             }
         }
     }

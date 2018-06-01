@@ -12,7 +12,6 @@ public class GameManagerScript : MonoBehaviour
     {
         if (instance == null)
         {
-            Debug.Log("creating instance");
             instance = this;
             PlayerUnits = new List<GameObject>();
         }
@@ -35,8 +34,6 @@ public class GameManagerScript : MonoBehaviour
         if (PlayerUnits != null)
         {
             PlayerUnits.Add(g);
-            Debug.Log(PlayerUnits.Count);
-            Debug.Log("adding player");
         }
 
     }
@@ -52,7 +49,6 @@ public class GameManagerScript : MonoBehaviour
 
         if (PlayerUnits != null && PlayerUnits.Count > 0)
         {
-            Debug.Log(PlayerUnits.Count);
             return PlayerUnits[Random.Range(0, PlayerUnits.Count - 1)];
         }
         else
