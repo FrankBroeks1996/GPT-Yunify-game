@@ -13,7 +13,11 @@ public class ChangeSceneHandler : NetworkBehaviour {
         if(changeSceneHandler == null)
         {
             DontDestroyOnLoad(this);
-            changeSceneHandler = new ChangeSceneHandler();
+            changeSceneHandler = this;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -24,6 +28,20 @@ public class ChangeSceneHandler : NetworkBehaviour {
 
     public void ChangeToGameScreen()
     {
+        if (hasAuthority)
+        {
+            new NetworkManager().ServerChangeScene("SampleScene");
+        }
+        else
+        {
+            CmdRestartGame();
+        }
+    }
+
+    [Command]
+    public void CmdRestartGame()
+    {
+        Debug.Log("Do it");
         new NetworkManager().ServerChangeScene("SampleScene");
     }
 }

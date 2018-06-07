@@ -50,12 +50,14 @@ public class UnitSpawnerScript : NetworkBehaviour
     [Command]
     void CmdSpawnEnemy()
     {
-        Debug.Log("hi");
         if (enemyPrefab != null)
         {
-            Vector3 v3 = FindSpawnLocation();
-            GameObject go = Instantiate(enemyPrefab, v3, Quaternion.identity);
-            NetworkServer.Spawn(go);
+            if (NetworkServer.active)
+            {
+                Vector3 v3 = FindSpawnLocation();
+                GameObject go = Instantiate(enemyPrefab, v3, Quaternion.identity);
+                NetworkServer.Spawn(go);
+            }
         }
     }
 }

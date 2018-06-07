@@ -5,13 +5,13 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour {
 
     public int Damage = 1;
+    public int Score = 1;
 
     void OnCollisionEnter(Collision objectHit)
     {
-        Debug.Log("triggered");
-        if(objectHit.gameObject.tag == "Player")
+        if(objectHit.transform.tag == "Player")
         {
-            objectHit.transform.parent.GetComponent<HealthScript>().Health -= Damage;
+            objectHit.transform.parent.GetComponent<PlayerStatsScript>().Health -= Damage;
             Destroy(gameObject);
         }
     }

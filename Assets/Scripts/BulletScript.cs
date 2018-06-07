@@ -7,6 +7,8 @@ public class BulletScript : MonoBehaviour {
     public int Damage = 1;
     public float Speed = 10f;
     public float TimeAlive = 2f;
+
+    public PlayerStatsScript PlayerStats;
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,6 +26,7 @@ public class BulletScript : MonoBehaviour {
         if (objectHit.gameObject.tag == "Enemy")
         {
             objectHit.gameObject.GetComponent<HealthScript>().Health -= Damage;
+            PlayerStats.Score += objectHit.gameObject.GetComponent<EnemyScript>().Score;
             Destroy(gameObject);
         }
     }

@@ -14,18 +14,19 @@ public class ShootingScript : NetworkBehaviour {
         {
             Vector3 pos = Camera.transform.position;
             Quaternion rot = Camera.transform.rotation;
-            CmdSpawnBullet(pos, rot);
+            CmdSpawnBullet(pos, rot, gameObject);
         }
 	}
 
     [Command]
-    void CmdSpawnBullet(Vector3 position, Quaternion rotation)
+    void CmdSpawnBullet(Vector3 position, Quaternion rotation, GameObject player)
     {
         if (BulletPrefab != null)
         {
             GameObject bullet = Instantiate(BulletPrefab);
             bullet.transform.position = position;
             bullet.transform.rotation = rotation;
+            bullet.GetComponent<BulletScript>().PlayerStats = this.GetComponent<PlayerStatsScript>();
             NetworkServer.Spawn(bullet);
         }
     }
