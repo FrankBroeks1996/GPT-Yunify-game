@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour {
-
+    
     public int Damage = 1;
     public float Speed = 10f;
     public float TimeAlive = 2f;

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 136234744582588064}
   - component: {fileID: 114168514656496320}
   - component: {fileID: 114855410832566006}
+  - component: {fileID: 114130414237099096}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1480404304580956}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 2, y: 0.1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,6 +87,38 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1480404304580956}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114130414237099096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1480404304580956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 233
+    i1: 252
+    i2: 255
+    i3: 187
+    i4: 233
+    i5: 8
+    i6: 254
+    i7: 132
+    i8: 249
+    i9: 254
+    i10: 80
+    i11: 42
+    i12: 121
+    i13: 146
+    i14: 50
+    i15: 19
+  m_ServerOnly: 1
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114168514656496320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,6 +152,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
-  m_Height: 120
+  m_Height: 1
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
