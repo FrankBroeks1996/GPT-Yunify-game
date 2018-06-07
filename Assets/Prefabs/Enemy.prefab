@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 1
+  unit: 1
 --- !u!114 &114919074311137930
 MonoBehaviour:
   m_ObjectHideFlags: 1

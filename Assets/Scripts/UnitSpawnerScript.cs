@@ -55,8 +55,6 @@ public class UnitSpawnerScript : NetworkBehaviour
         float x = Random.Range(bottomLeftx, toprightx);
         float y = Random.Range(bottomLeftY, toprighty);
         float z = Random.Range(bottomleftz, toprightz);
-        Debug.Log(x);
-        Debug.Log(y);
         return new Vector3(x, y, z);
     }
 

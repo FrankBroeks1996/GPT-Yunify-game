@@ -29,5 +29,10 @@ public class BulletScript : MonoBehaviour {
             PlayerStats.Score += objectHit.gameObject.GetComponent<EnemyScript>().Score;
             Destroy(gameObject);
         }
+        if(objectHit.gameObject.tag == "Coin")
+        {
+            Destroy(objectHit.gameObject);
+            PlayerStats.Score += 10;
+        }
     }
 }

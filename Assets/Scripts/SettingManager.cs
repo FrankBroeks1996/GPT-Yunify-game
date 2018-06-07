@@ -7,7 +7,7 @@ public class SettingManager : MonoBehaviour {
 
     public float difficulty = 1f;
     public float unitHealth = 1f;
-    public float unitSpeed = 5f;
+    public float unitSpeed = 5.0f;
     public float spawnSpeed = 1f;
 
     public float playerHealth = 5f;
