@@ -7,7 +7,20 @@ using UnityEngine.SceneManagement;
 public class HealthScript : MonoBehaviour
 {
 
-    public int Health = 5;
+    public float Health = 5;
+    public UnitType unit;
+
+    void Awake()
+    {
+        if(unit == UnitType.UNIT_PLAYER)
+        {
+            this.Health = SettingManager.instance.playerHealth;
+        }
+        if(unit == UnitType.UNIT_MONSTER_BASIC)
+        {
+            this.Health = SettingManager.instance.unitHealth;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,4 +30,10 @@ public class HealthScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+}
+
+public enum UnitType
+{
+    UNIT_PLAYER,
+    UNIT_MONSTER_BASIC
 }

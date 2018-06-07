@@ -5,9 +5,14 @@ using UnityEngine.Networking;
 
 public class PlayerStatsScript : NetworkBehaviour {
 
-    public int Health = 5;
+    public float Health = 5;
     [SyncVar]
     public int Score = 0;
+
+    private void Awake()
+    {
+        Health = SettingManager.instance.playerHealth;
+    }
 
     void Update()
     {

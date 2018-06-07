@@ -9,6 +9,7 @@ public class UnitMovementScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         target = GameManagerScript.instance.GetTarget();
+        this.MovementSpeed = SettingManager.instance.unitSpeed;
 	}
 	
 	// Update is called once per frame

@@ -8,46 +8,14 @@ public class UnitSpawnerScript : NetworkBehaviour
 
     NetworkIdentity ni;
     public GameObject enemyPrefab;
-    public float difficulty = 1f;
-
-    // Use this for initialization
+    public GameObject[] walls;
+    
     void Start()
     {
-        InvokeRepeating("CmdSpawnEnemy", 1, 1f);
+        InvokeRepeating("CmdSpawnEnemy", 1, SettingManager.instance.spawnSpeed);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-    Vector3 FindSpawnLocation()
-    {
-        Vector3 location;
-        if (GameManagerScript.instance.GetTarget() != null)
-        {
-            location = GameManagerScript.instance.GetTarget().transform.position;
-            switch (Random.Range(1, 4))
-            {
-                case 1:
-                    location.x += 30;
-                    break;
-                case 2:
-                    location.z += 30;
-                    break;
-                case 3:
-                    location.x -= 30;
-                    break;
-                case 4:
-                    location.z -= 30;
-                    break;
-            }
-            return location;
-        }
-        return Vector3.zero;
-    }
-
-    public GameObject[] walls;
     public GameObject testcube;
     Vector3 FindSpawnLocation2()
     {
@@ -74,8 +42,6 @@ public class UnitSpawnerScript : NetworkBehaviour
         }
 
 
-        //r.boundsmin == bottom left
-        //r.bounds.max == top right
         if (r != null)
         {
             return location = RandomSpawnLocation(r.bounds.min.x, r.bounds.min.y, r.bounds.max.x, r.bounds.max.y, r.bounds.min.z, r.bounds.max.z);
