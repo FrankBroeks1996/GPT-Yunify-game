@@ -11,7 +11,7 @@ public class EnemyScript : MonoBehaviour {
     {
         if(objectHit.transform.tag == "Player")
         {
-            objectHit.transform.parent.GetComponent<PlayerStatsScript>().Health -= Damage;
+            objectHit.transform.parent.parent.GetComponent<PlayerStatsScript>().Health -= Damage;
             Destroy(gameObject);
         }
     }
