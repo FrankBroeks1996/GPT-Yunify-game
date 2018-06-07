@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+    float timer = 5f;
+
+
+    // Update is called once per frame
+    void Update () {
+        timer -= Time.deltaTime;
+        if(timer < 0f)
+        {
+            Destroy(this.gameObject);
+        }
 	}
 }

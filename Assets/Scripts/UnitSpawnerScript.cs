@@ -10,11 +10,12 @@ public class UnitSpawnerScript : NetworkBehaviour
     public GameObject enemyPrefab;
     public GameObject coinPrefab;
     public GameObject[] walls;
+    private Direction dir;
     
     void Start()
     {
         //InvokeRepeating("CmdSpawnEnemy", 1, SettingManager.instance.spawnSpeed);
-        InvokeRepeating("CmdSpawnCoin", 1, 0.1f);
+        InvokeRepeating("CmdSpawnCoin", 1, 1f);
     }
 
 
@@ -37,7 +38,23 @@ public class UnitSpawnerScript : NetworkBehaviour
         Renderer r = GetWall();
         if(r != null)
         {
-            return location = RandomSpawnLocation(r.bounds.min.x, r.bounds.min.y, r.bounds.max.x, r.bounds.min.y, r.bounds.min.z + 5, r.bounds.min.z + 5);
+            if(dir == Direction.NORTH)
+            {
+                return location = RandomSpawnLocation(r.bounds.min.x, r.bounds.min.y, r.bounds.max.x, r.bounds.min.y, r.bounds.min.z - 5, r.bounds.min.z - 5);
+            }
+            if(dir == Direction.SOUTH)
+            {
+                return location = RandomSpawnLocation(r.bounds.min.x, r.bounds.min.y, r.bounds.max.x, r.bounds.min.y, r.bounds.min.z + 5, r.bounds.min.z + 5);
+            }
+            if(dir == Direction.WEST)
+            {
+                return location = RandomSpawnLocation(r.bounds.min.x + 5, r.bounds.min.y, r.bounds.min.x + 5, r.bounds.min.y, r.bounds.min.z, r.bounds.max.z);
+            }
+            if(dir == Direction.EAST)
+            {
+                return location = RandomSpawnLocation(r.bounds.min.x - 5, r.bounds.min.y, r.bounds.max.x - 5, r.bounds.min.y, r.bounds.min.z, r.bounds.max.z);
+            }
+            return Vector3.zero;
         }
         else
         {
@@ -54,12 +71,16 @@ public class UnitSpawnerScript : NetworkBehaviour
         switch (Random.Range(1, 5))
         {
             case 1:
+                dir = walls[0].GetComponent<DirectionScript>().direction;
                 return walls[0].GetComponent<Renderer>();
             case 2:
+                dir = walls[1].GetComponent<DirectionScript>().direction;
                 return walls[1].GetComponent<Renderer>();
             case 3:
+                dir = walls[2].GetComponent<DirectionScript>().direction;
                 return walls[2].GetComponent<Renderer>();
             case 4:
+                dir = walls[3].GetComponent<DirectionScript>().direction;
                 return walls[3].GetComponent<Renderer>();
         }
         return null;
@@ -93,8 +114,17 @@ public class UnitSpawnerScript : NetworkBehaviour
     {
         if(coinPrefab != null)
         {
-            GameObject go = Instantiate(coinPrefab, FindCoinSpawnLocation(), Quaternion.identity);
+            Vector3 v3 = FindCoinSpawnLocation();
+            v3.y = 2.5f;
+            GameObject go = Instantiate(coinPrefab, v3, Quaternion.Euler(90, 0, 0));
             NetworkServer.Spawn(go);
         }
     }
+}
+public enum Direction
+{
+    NORTH,
+    SOUTH,
+    WEST,
+    EAST
 }
