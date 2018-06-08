@@ -239,7 +239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &344582468
 Transform:
   m_ObjectHideFlags: 0
@@ -312,7 +312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &454078502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,7 +725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1097672294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,6 +1026,8 @@ MonoBehaviour:
   - {fileID: 590083662}
   - {fileID: 1473829664}
   - {fileID: 1833532263}
+  maxCoinSpawnDistance: 10
+  minCoinSpawnDistance: 2
   testcube: {fileID: 0}
 --- !u!114 &1662364172
 MonoBehaviour:

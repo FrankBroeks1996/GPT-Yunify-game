@@ -10,7 +10,6 @@ public class JoinButton : MonoBehaviour
     private void Awake()
     {
         buttonText = GetComponentInChildren<Text>();
-        GetComponent<Button>().onClick.AddListener(JoinMatch);
     }
 
     public void Initialize(MatchInfoSnapshot match, Transform panelTransform)
@@ -23,7 +22,7 @@ public class JoinButton : MonoBehaviour
         transform.localPosition = Vector3.zero;
     }
 
-    private void JoinMatch()
+    public void JoinMatch()
     {
         FindObjectOfType<CustomNetworkManager>().JoinMatch(match);
     }
