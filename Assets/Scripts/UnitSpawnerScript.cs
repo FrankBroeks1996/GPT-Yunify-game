@@ -16,8 +16,11 @@ public class UnitSpawnerScript : NetworkBehaviour
     
     void Start()
     {
-        InvokeRepeating("CmdSpawnEnemy", 1, SettingManager.instance.spawnSpeed);
-        InvokeRepeating("CmdSpawnCoin", 1, 1f);
+        if (isServer)
+        {
+            InvokeRepeating("CmdSpawnEnemy", 1, SettingManager.instance.spawnSpeed);
+            InvokeRepeating("CmdSpawnCoin", 1, 1f);
+        }
     }
 
 
