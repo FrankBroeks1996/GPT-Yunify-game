@@ -14,6 +14,7 @@ public class SettingManager : MonoBehaviour {
 
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         if (instance == null)
         {
             instance = this;
