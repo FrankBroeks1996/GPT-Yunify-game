@@ -10,11 +10,13 @@ public class UnitSpawnerScript : NetworkBehaviour
     public GameObject enemyPrefab;
     public GameObject coinPrefab;
     public GameObject[] walls;
+    public float maxCoinSpawnDistance = 10f;
+    public float minCoinSpawnDistance = 2f;
     private Direction dir;
     
     void Start()
     {
-        //InvokeRepeating("CmdSpawnEnemy", 1, SettingManager.instance.spawnSpeed);
+        InvokeRepeating("CmdSpawnEnemy", 1, SettingManager.instance.spawnSpeed);
         InvokeRepeating("CmdSpawnCoin", 1, 1f);
     }
 
@@ -32,6 +34,11 @@ public class UnitSpawnerScript : NetworkBehaviour
         return location;
     }
 
+    /// <summary>
+    /// Method used to find a location within 4 variable walls available in the walls array list.
+    /// the location is determined depending on the renderer bounds of the wall and the min and max coinspawndistance variables.
+    /// </summary>
+    /// <returns></returns>
     Vector3 FindCoinSpawnLocation()
     {
         Vector3 location;
@@ -40,19 +47,19 @@ public class UnitSpawnerScript : NetworkBehaviour
         {
             if(dir == Direction.NORTH)
             {
-                return location = RandomSpawnLocation(r.bounds.min.x, r.bounds.min.y, r.bounds.max.x, r.bounds.min.y, r.bounds.min.z - 5, r.bounds.min.z - 5);
+                return location = RandomSpawnLocation(r.bounds.min.x, r.bounds.min.y, r.bounds.max.x, r.bounds.min.y, r.bounds.min.z - minCoinSpawnDistance, r.bounds.min.z - maxCoinSpawnDistance);
             }
             if(dir == Direction.SOUTH)
             {
-                return location = RandomSpawnLocation(r.bounds.min.x, r.bounds.min.y, r.bounds.max.x, r.bounds.min.y, r.bounds.min.z + 5, r.bounds.min.z + 5);
+                return location = RandomSpawnLocation(r.bounds.min.x, r.bounds.min.y, r.bounds.max.x, r.bounds.min.y, r.bounds.min.z + minCoinSpawnDistance, r.bounds.min.z + maxCoinSpawnDistance);
             }
             if(dir == Direction.WEST)
             {
-                return location = RandomSpawnLocation(r.bounds.min.x + 5, r.bounds.min.y, r.bounds.min.x + 5, r.bounds.min.y, r.bounds.min.z, r.bounds.max.z);
+                return location = RandomSpawnLocation(r.bounds.min.x + minCoinSpawnDistance, r.bounds.min.y, r.bounds.min.x + maxCoinSpawnDistance, r.bounds.min.y, r.bounds.min.z, r.bounds.max.z);
             }
             if(dir == Direction.EAST)
             {
-                return location = RandomSpawnLocation(r.bounds.min.x - 5, r.bounds.min.y, r.bounds.max.x - 5, r.bounds.min.y, r.bounds.min.z, r.bounds.max.z);
+                return location = RandomSpawnLocation(r.bounds.min.x - minCoinSpawnDistance, r.bounds.min.y, r.bounds.max.x - maxCoinSpawnDistance, r.bounds.min.y, r.bounds.min.z, r.bounds.max.z);
             }
             return Vector3.zero;
         }
