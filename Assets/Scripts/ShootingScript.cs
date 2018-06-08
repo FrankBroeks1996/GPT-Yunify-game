@@ -10,7 +10,7 @@ public class ShootingScript : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || Input.GetKeyDown(KeyCode.Space) && GetComponent<NetworkIdentity>().hasAuthority)
+		if((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && GetComponent<NetworkIdentity>().hasAuthority) || (Input.GetKeyDown(KeyCode.Space) && GetComponent<NetworkIdentity>().hasAuthority))
         {
             Vector3 pos = Camera.transform.position;
             Quaternion rot = Camera.transform.rotation;
