@@ -11,12 +11,24 @@ public class GameUIScreen : MonoBehaviour {
 	void Update () {
         string text = "";
 
-        foreach (GameObject player in GameManagerScript.instance.PlayerUnits)
+        if (GameManagerScript.instance.PlayerUnits != null)
         {
-            int score = player.GetComponent<PlayerStatsScript>().Score;
-            text += "Score: " + score + "\n";
+            foreach (GameObject player in GameManagerScript.instance.PlayerUnits)
+            {
+                int score = player.GetComponent<PlayerStatsScript>().Score;
+                text += "Score: " + score + "\n";
+            }
         }
 
         ScoreText.text = text;
 	}
+
+    public void Recalibrate()
+    {
+        foreach (GameObject player in GameManagerScript.instance.PlayerUnits)
+        {
+            Debug.Log(player.GetComponentInChildren<CamGyroScript>());
+            player.GetComponentInChildren<CamGyroScript>().Recalibrate();
+        }
+    }
 }
