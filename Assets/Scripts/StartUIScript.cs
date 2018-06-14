@@ -5,17 +5,18 @@ using UnityEngine.UI;
 
 public class StartUIScript : MonoBehaviour {
 
+    public GameObject EnterNameScreen;
     public GameObject MainScreen;
-    public GameObject HostingScreen;
+    public GameObject HostingSettingsScreen;
     public GameObject MatchesScreen;
-    public GameObject SettingsScreen;
+    public GameObject LobbyScreen;
 
     public Slider DifficultySlider;
 
 	public void SwitchToHostingScreen()
     {
         DisableAllScreens();
-        HostingScreen.SetActive(true);
+        HostingSettingsScreen.SetActive(true);
     }
 
     public void SwitchToMainScreen()
@@ -30,10 +31,16 @@ public class StartUIScript : MonoBehaviour {
         MatchesScreen.SetActive(true);
     }
 
+    public void SwitchToLobbyScreen()
+    {
+        DisableAllScreens();
+        LobbyScreen.SetActive(true);
+    }
+
     public void SwitchToSettingsScreen()
     {
         DisableAllScreens();
-        SettingsScreen.SetActive(true);
+        HostingSettingsScreen.SetActive(true);
     }
 
     public void SaveSettings()
@@ -50,9 +57,10 @@ public class StartUIScript : MonoBehaviour {
 
     private void DisableAllScreens()
     {
-        SettingsScreen.SetActive(false);
+        HostingSettingsScreen.SetActive(false);
         MainScreen.SetActive(false);
-        HostingScreen.SetActive(false);
+        LobbyScreen.SetActive(false);
         MatchesScreen.SetActive(false);
+        EnterNameScreen.SetActive(false);
     }
 }
