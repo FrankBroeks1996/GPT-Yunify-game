@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: ac622754b28083c4fb63c4643a47aacb
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: pCylinder4
+    100002: pCylinder6
+    100004: Soldier
+    100006: //RootNode
+    100008: soldier_RU_02
+    100010: soldier_RU_02 Footsteps
+    100012: soldier_RU_02 Head
+    100014: soldier_RU_02 HeadNub
+    100016: soldier_RU_02 L Calf
+    100018: soldier_RU_02 L Clavicle
+    100020: soldier_RU_02 L Finger0
+    100022: soldier_RU_02 L Finger01
+    100024: soldier_RU_02 L Finger02
+    100026: soldier_RU_02 L Finger0Nub
+    100028: soldier_RU_02 L Finger1
+    100030: soldier_RU_02 L Finger11
+    100032: soldier_RU_02 L Finger12
+    100034: soldier_RU_02 L Finger1Nub
+    100036: soldier_RU_02 L Foot
+    100038: soldier_RU_02 L Forearm
+    100040: soldier_RU_02 L Hand
+    100042: soldier_RU_02 L Thigh
+    100044: soldier_RU_02 L Toe0
+    100046: soldier_RU_02 L Toe0Nub
+    100048: soldier_RU_02 L UpperArm
+    100050: soldier_RU_02 Neck
+    100052: soldier_RU_02 Pelvis
+    100054: soldier_RU_02 R Calf
+    100056: soldier_RU_02 R Clavicle
+    100058: soldier_RU_02 R Finger0
+    100060: soldier_RU_02 R Finger01
+    100062: soldier_RU_02 R Finger02
+    100064: soldier_RU_02 R Finger0Nub
+    100066: soldier_RU_02 R Finger1
+    100068: soldier_RU_02 R Finger11
+    100070: soldier_RU_02 R Finger12
+    100072: soldier_RU_02 R Finger1Nub
+    100074: soldier_RU_02 R Foot
+    100076: soldier_RU_02 R Forearm
+    100078: soldier_RU_02 R Hand
+    100080: soldier_RU_02 R Thigh
+    100082: soldier_RU_02 R Toe0
+    100084: soldier_RU_02 R Toe0Nub
+    100086: soldier_RU_02 R UpperArm
+    100088: soldier_RU_02 Spine
+    100090: soldier_RU_02 Spine1
+    100092: soldier_RU_02 Spine2
+    100094: transform1
+    100096: transform2
+    400000: pCylinder4
+    400002: pCylinder6
+    400004: Soldier
+    400006: //RootNode
+    400008: soldier_RU_02
+    400010: soldier_RU_02 Footsteps
+    400012: soldier_RU_02 Head
+    400014: soldier_RU_02 HeadNub
+    400016: soldier_RU_02 L Calf
+    400018: soldier_RU_02 L Clavicle
+    400020: soldier_RU_02 L Finger0
+    400022: soldier_RU_02 L Finger01
+    400024: soldier_RU_02 L Finger02
+    400026: soldier_RU_02 L Finger0Nub
+    400028: soldier_RU_02 L Finger1
+    400030: soldier_RU_02 L Finger11
+    400032: soldier_RU_02 L Finger12
+    400034: soldier_RU_02 L Finger1Nub
+    400036: soldier_RU_02 L Foot
+    400038: soldier_RU_02 L Forearm
+    400040: soldier_RU_02 L Hand
+    400042: soldier_RU_02 L Thigh
+    400044: soldier_RU_02 L Toe0
+    400046: soldier_RU_02 L Toe0Nub
+    400048: soldier_RU_02 L UpperArm
+    400050: soldier_RU_02 Neck
+    400052: soldier_RU_02 Pelvis
+    400054: soldier_RU_02 R Calf
+    400056: soldier_RU_02 R Clavicle
+    400058: soldier_RU_02 R Finger0
+    400060: soldier_RU_02 R Finger01
+    400062: soldier_RU_02 R Finger02
+    400064: soldier_RU_02 R Finger0Nub
+    400066: soldier_RU_02 R Finger1
+    400068: soldier_RU_02 R Finger11
+    400070: soldier_RU_02 R Finger12
+    400072: soldier_RU_02 R Finger1Nub
+    400074: soldier_RU_02 R Foot
+    400076: soldier_RU_02 R Forearm
+    400078: soldier_RU_02 R Hand
+    400080: soldier_RU_02 R Thigh
+    400082: soldier_RU_02 R Toe0
+    400084: soldier_RU_02 R Toe0Nub
+    400086: soldier_RU_02 R UpperArm
+    400088: soldier_RU_02 Spine
+    400090: soldier_RU_02 Spine1
+    400092: soldier_RU_02 Spine2
+    400094: transform1
+    400096: transform2
+    2100000: lambert3
+    2300000: pCylinder6
+    3300000: pCylinder6
+    4300000: pCylinder6
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
