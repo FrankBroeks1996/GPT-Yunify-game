@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
-  Speed: 25
+  Speed: 40
   TimeAlive: 2
   PlayerStats: {fileID: 0}
 --- !u!114 &114799301819169940

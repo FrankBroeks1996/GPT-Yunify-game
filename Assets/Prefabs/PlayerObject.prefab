@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 114531951550354492}
   - component: {fileID: 114155483930323896}
   - component: {fileID: 114811957321689914}
-  - component: {fileID: 114212756728990258}
   - component: {fileID: 114394186071594586}
   - component: {fileID: 114962416929240798}
   - component: {fileID: 114746781540357722}
@@ -199,18 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10573327cc671c9408dc9f5031156644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114212756728990258
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1134865631227184}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 828de9ca5e496984290c15490942e1f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Camera: {fileID: 1231662916937782}
 --- !u!114 &114394186071594586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -321,6 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 5
+  unit: 0
 --- !u!114 &114947236363335218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 1231662916937782}
+  camParent: {fileID: 0}
 --- !u!114 &114962416929240798
 MonoBehaviour:
   m_ObjectHideFlags: 1

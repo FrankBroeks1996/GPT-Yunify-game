@@ -7,7 +7,7 @@ public class CamGyroScript : NetworkBehaviour {
 
     public GameObject Camera;
 
-    private GameObject camParent;
+    public GameObject camParent;
 
     // Use this for initialization
     void Start()
@@ -43,5 +43,11 @@ public class CamGyroScript : NetworkBehaviour {
         {
             this.transform.Rotate(Vector3.up);
         }
+    }
+
+    public void Recalibrate()
+    {
+        camParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
     }
 }

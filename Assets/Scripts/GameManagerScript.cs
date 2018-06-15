@@ -10,6 +10,7 @@ public class GameManagerScript : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(this);
         if (instance == null)
         {
             instance = this;
