@@ -1,17 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerUnitScript : MonoBehaviour {
+public class PlayerUnitScript : NetworkBehaviour {
 
+    [SyncVar]
+    public string PlayerName;
+    
 	// Use this for initialization
 	void Start () {
         GameManagerScript.instance.AddPlayer(this.gameObject);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
     void OnDestroy()

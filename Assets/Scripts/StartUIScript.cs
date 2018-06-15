@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class StartUIScript : MonoBehaviour {
 
+    public static StartUIScript instance;
+
     public GameObject EnterNameScreen;
     public GameObject MainScreen;
     public GameObject HostingSettingsScreen;
@@ -13,7 +15,15 @@ public class StartUIScript : MonoBehaviour {
 
     public Slider DifficultySlider;
 
-	public void SwitchToHostingScreen()
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+
+    public void SwitchToHostingScreen()
     {
         DisableAllScreens();
         HostingSettingsScreen.SetActive(true);
@@ -47,7 +57,17 @@ public class StartUIScript : MonoBehaviour {
     {
         SettingManager.instance.difficulty = DifficultySlider.value;
         DisableAllScreens();
-        SwitchToHostingScreen();
+        SwitchToLobbyScreen();
+    }
+
+    public void SavePlayerName(Text playerText)
+    {
+        PlayerPrefs.SetString("playerName", playerText.text);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     public void SwitchToGame()

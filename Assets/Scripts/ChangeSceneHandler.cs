@@ -41,7 +41,6 @@ public class ChangeSceneHandler : NetworkBehaviour {
     [Command]
     public void CmdRestartGame()
     {
-        Debug.Log("Do it");
         new NetworkManager().ServerChangeScene("SampleScene");
     }
 }

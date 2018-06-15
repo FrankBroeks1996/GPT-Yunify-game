@@ -25,5 +25,6 @@ public class JoinButton : MonoBehaviour
     public void JoinMatch()
     {
         FindObjectOfType<CustomNetworkManager>().JoinMatch(match);
+        StartUIScript.instance.SwitchToLobbyScreen();
     }
 }

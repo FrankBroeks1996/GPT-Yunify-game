@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024048652a023f74b9a7af7c6c337234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerName: 
   PlayerPrefab: {fileID: 1134865631227184, guid: 1580fff69aa300b46857376ae3884ea4,
     type: 2}
 --- !u!114 &114399644438338544
@@ -85,4 +86,4 @@ MonoBehaviour:
     i14: 165
     i15: 190
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1

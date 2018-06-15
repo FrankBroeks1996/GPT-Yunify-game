@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Networking.Match;
+using UnityEngine.UI;
 
 public class CustomNetworkManager : NetworkManager {
-
+    
     public GameObject MatchListPnl;
 
     private float timer = 5f;
@@ -21,10 +22,10 @@ public class CustomNetworkManager : NetworkManager {
         }
     }
 
-    public void StartMatchHosting()
+    public void StartMatchHosting(Text matchName)
     {
         StartMatchMaker();
-        matchMaker.CreateMatch("Match", 2, true, "", "", "", 0, 0, OnMatchCreated);
+        matchMaker.CreateMatch(matchName.text, 2, true, "", "", "", 0, 0, OnMatchCreated);
     }
 
     private void OnMatchCreated(bool success, string extendedInfo, MatchInfo responseData)

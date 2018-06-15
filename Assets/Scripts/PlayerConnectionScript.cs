@@ -8,26 +8,20 @@ public class PlayerConnectionScript : NetworkBehaviour {
     public GameObject PlayerPrefab;
 	// Use this for initialization
 	void Start () {
-        //DontDestroyOnLoad(this);
         if (!isLocalPlayer)
             return;
 
         Debug.Log("PlayerConnectionObject::Start -- Spawning playerUnit..");
-        CmdSpawnPlayerUnit();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        CmdSpawnPlayerUnit(PlayerPrefs.GetString("playerName"));
 	}
 
     [Command]
-    void CmdSpawnPlayerUnit()
+    void CmdSpawnPlayerUnit(string playerName)
     {
         if(PlayerPrefab != null)
         {
             GameObject go = Instantiate(PlayerPrefab);
-            //go.gameObject.GetComponent<NetworkIdentity>().AssignClientAuthority(connectionToClient);
+            go.GetComponent<PlayerUnitScript>().PlayerName = playerName;
             NetworkServer.SpawnWithClientAuthority(go, connectionToClient);
         }
     }

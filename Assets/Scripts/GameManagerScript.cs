@@ -18,18 +18,6 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void AddPlayer(GameObject g)
     {
         if (PlayerUnits != null)
