@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class FillLobbyListScript : MonoBehaviour {
 
     public GameObject PlayerTextPrefab;
-    
-
+   
     private void Update()
     {
         FillLobbyList();
@@ -29,12 +28,14 @@ public class FillLobbyListScript : MonoBehaviour {
 
     private void CreateNewPlayerNamePanels()
     {
-        foreach (GameObject playerUnit in GameManagerScript.instance.PlayerUnits)
-        {
-            GameObject playerNameText = Instantiate(PlayerTextPrefab);
-            playerNameText.GetComponentInChildren<Text>().text = playerUnit.GetComponent<PlayerUnitScript>().PlayerName;
-            playerNameText.transform.SetParent(transform);
-            playerNameText.transform.localScale = new Vector3(1, 1, 1);
+        if (GameManagerScript.instance != null && GameManagerScript.instance.PlayerUnits != null) {
+            foreach (GameObject playerUnit in GameManagerScript.instance.PlayerUnits)
+            {
+                GameObject playerNameText = Instantiate(PlayerTextPrefab);
+                playerNameText.GetComponentInChildren<Text>().text = playerUnit.GetComponent<PlayerUnitScript>().PlayerName;
+                playerNameText.transform.SetParent(transform);
+                playerNameText.transform.localScale = new Vector3(1, 1, 1);
+            }
         }
     }
 }

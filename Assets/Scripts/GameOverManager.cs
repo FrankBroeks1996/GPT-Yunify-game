@@ -1,17 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class GameOverManager : MonoBehaviour {
+public class GameOverManager : NetworkBehaviour {
 
-    public Button button;
+    public Button RestartBtn;
 
     private ChangeSceneHandler changeSceneHandler;
 
     void Awake()
     {
         changeSceneHandler = FindObjectOfType<ChangeSceneHandler>();
-        button.onClick.AddListener(() => changeSceneHandler.ChangeToGameScreen());
+        RestartBtn.onClick.AddListener(() => changeSceneHandler.ChangeToGameScreen());
+    }
+
+    private void Start()
+    {
+        if (isServer)
+            RestartBtn.gameObject.SetActive(true);
     }
 }

@@ -1354,6 +1354,7 @@ MonoBehaviour:
   MatchesScreen: {fileID: 168512113}
   LobbyScreen: {fileID: 393998809}
   DifficultySlider: {fileID: 689294255}
+  StartGameBtn: {fileID: 398915598}
 --- !u!1 &443517283
 GameObject:
   m_ObjectHideFlags: 0
@@ -3705,7 +3706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1758350402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3776,7 +3777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1760890943
 RectTransform:
   m_ObjectHideFlags: 0

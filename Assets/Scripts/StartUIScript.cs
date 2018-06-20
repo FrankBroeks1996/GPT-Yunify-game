@@ -14,6 +14,7 @@ public class StartUIScript : MonoBehaviour {
     public GameObject LobbyScreen;
 
     public Slider DifficultySlider;
+    public GameObject StartGameBtn;
 
     private void Awake()
     {
@@ -38,6 +39,7 @@ public class StartUIScript : MonoBehaviour {
     public void SwitchToMatchesScreen()
     {
         DisableAllScreens();
+        StartGameBtn.SetActive(false);
         MatchesScreen.SetActive(true);
     }
 
@@ -50,6 +52,7 @@ public class StartUIScript : MonoBehaviour {
     public void SwitchToSettingsScreen()
     {
         DisableAllScreens();
+        StartGameBtn.SetActive(true);
         HostingSettingsScreen.SetActive(true);
     }
 

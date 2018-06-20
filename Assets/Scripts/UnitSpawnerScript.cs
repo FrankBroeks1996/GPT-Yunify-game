@@ -5,8 +5,6 @@ using UnityEngine.Networking;
 
 public class UnitSpawnerScript : NetworkBehaviour
 {
-
-    NetworkIdentity ni;
     public GameObject enemyPrefab;
     public GameObject coinPrefab;
     public GameObject[] walls;
